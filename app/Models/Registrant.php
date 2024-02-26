@@ -10,14 +10,19 @@ class Registrant extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user',
         'name',
         'nisn',
         'nik',
         'birthplace',
         'birthday',
         'gender',
+        'statusonfamily',
         'placechild',
         'siblings',
         'phone',
+        'major',
+        'boarding',
+        'program'
     ];
 }

@@ -20,9 +20,13 @@ return new class extends Migration
             $table->string('birthplace')->nullable();
             $table->date('birthday')->nullable();
             $table->enum('gender', [1, 2])->nullable();
+            $table->enum('statusonfamily', [1, 2])->nullable();
             $table->string('placechild')->nullable();
             $table->string('siblings')->nullable();
             $table->string('phone')->nullable();
+            $table->unsignedBigInteger('major')->nullable();
+            $table->enum('boarding', [1, 2])->nullable()->comment('1. Ya, 2. Tidak');
+            $table->unsignedBigInteger('program')->nullable();
             $table->timestamps();
         });
     }

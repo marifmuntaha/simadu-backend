@@ -81,6 +81,7 @@ return [
         'string'  => ':attribute maksimal berisi :max karakter.',
         'array'   => ':attribute maksimal terdiri dari :max anggota.',
     ],
+    'max_digits' => ':attribute maksimal bernilai :max karakter.',
     'mimes'     => ':attribute harus berupa berkas berjenis: :values.',
     'mimetypes' => ':attribute harus berupa berkas berjenis: :values.',
     'min'       => [

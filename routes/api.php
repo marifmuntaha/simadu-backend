@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InstitutionController;
+use App\Http\Controllers\MajorController;
 use App\Http\Controllers\RegistrantController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::post('/auth/register', [AuthController::class, 'register']);
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::group(['prefix' => 'master'], function (){
     Route::apiResource('institution', InstitutionController::class)->only(['show', 'update']);
+    Route::apiResource('major', MajorController::class);
 });
 Route::group(['middleware' => 'auth:sanctum'], function (){
     Route::get('/auth/info', [AuthController::class, 'info']);
